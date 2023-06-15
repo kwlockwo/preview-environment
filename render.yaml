@@ -16,7 +16,10 @@ services:
     fromDatabase:
       name: postgres_db
       property: connectionString
+  - key: BAR
+    sync: false
   - fromGroup: foo
+  - fromGroup: foo-preview
 - type: web
   name: render-todo
   env: static
