@@ -16,6 +16,7 @@ services:
     fromDatabase:
       name: postgres_db
       property: connectionString
+  - fromGroup: foo
 - type: web
   name: render-todo
   env: static
