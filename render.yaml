@@ -32,7 +32,7 @@ services:
       name: express-backend
       property: host
   - key: SKIP_INSTALL_DEPS
-    value: true
+    value: false
 databases:
 - name: postgres_db
   databaseName: test_db
