@@ -6,8 +6,8 @@ services:
   previewPlan: starter
   name: express-backend
   env: node
-  buildCommand: cd backend && yarn
-  startCommand: cd backend && yarn start
+  buildCommand: cd backend && npm ci
+  startCommand: cd backend && npm start
   envVars:
   - key: MY_API_KEY
     value: production-api-key
@@ -23,7 +23,7 @@ services:
 - type: web
   name: render-todo
   env: static
-  buildCommand: cd frontend && yarn install && yarn build
+  buildCommand: cd frontend && npm ci && npm run build
   staticPublishPath: ./frontend/build
   envVars:
   - key: REACT_APP_API_HOST
@@ -31,6 +31,8 @@ services:
       type: web
       name: express-backend
       property: host
+  - key: SKIP_INSTALL_DEPS
+    value: true
 databases:
 - name: postgres_db
   databaseName: test_db
