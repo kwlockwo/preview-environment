@@ -67,4 +67,4 @@ app.get('/todos', async (req, res) => {
 })
 
 app.get('/', (req, res) => res.json({ message: 'Hello World' }))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, async () => console.log(`Example app listening on port ${port}!`))
