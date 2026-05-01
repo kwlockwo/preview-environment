@@ -36,4 +36,5 @@ databases:
   databaseName: test_db
   user: test_user
   plan: basic-256mb
-  previewPlan: starter
+  diskSizeGB: 250
+  previewPlan: basic-256mb
